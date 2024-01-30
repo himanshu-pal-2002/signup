@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<body>
+    <center>
+    <h1>User Profile</h1>
+    <div class="card" style="width: 23rem;">
+      <img src="{{ profile.profile_pic.url }}" class="card-img-top" height="200px" width="110px" alt="...">
+      
+      <div class="card-body">
+        <h5 class="card-title">Username : {{profile.username}}</h5>
+        <p class="card-text">Email : {{profile.username.email}}</p>
+        <p class="card-text">Address : {{profile.address}}</p>
+        <a href="{% url 'Show_Details' %}" class="btn btn-primary">Back</a>
+      </div>
+      
+    </div>
+    </center>
+    
+{% endblock %}

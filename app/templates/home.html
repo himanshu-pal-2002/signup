@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <center>
+        {% if username %}
+            <h1>Welcome to Homepage Mr {{username}}</h1>
+        {% else %}
+            <h1>Welcome to Homepage</h1>
+        {% endif %}
+    </center>
+{% endblock %}

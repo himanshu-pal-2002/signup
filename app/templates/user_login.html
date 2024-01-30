@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block title %}User Login{% endblock %}
+
+{% block content %}
+    <center>
+       <h1>Login Form</h1>
+       <br>
+       <form method="POST">
+            {% csrf_token %}
+            <label for="un">Username</label>
+            <input type="text" name="un" id="un"><br><br>
+            <label for="pw">Password</label>
+            <input type="password" name="pw" id="pw"><br><br>
+            <input type="submit" value="Login">
+       </form><br>
+       <a href="{% url 'Forget_Password' %}" class="btn btn-secondary">Forget Password</a>
+    </center>
+{% endblock %}
+   
